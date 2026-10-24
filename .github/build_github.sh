@@ -53,6 +53,8 @@ else
   wget -q https://github.com/LiveContainer/SideStore/releases/download/nightly/SideStore.ipa -O SideStore.ipa
 fi
 unzip -o SideStore.ipa
+# IPA, собранный на Windows, распаковывается с папками без прав -> фиксим
+chmod -R u+rwX .
 cd ..
 
 # SideStore
